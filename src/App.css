@@ -2,37 +2,147 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER SECTION */
+.header {
+  background: url("./images/andrew-neel-jtsW--Z6bFw-unsplash.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.black-overlay {
+  background: rgba(0, 0, 0, 0.60);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headline {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
+  margin: 10px;
+  font-family: poppins-thin;
+  font-size: 2vmax;
 }
 
-.App-link {
-  color: #61dafb;
+.headline-name {
+  color: #1B5C5A;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.headline-words {
+  margin-bottom: 10px;
+}
+
+.hero-button {
+  display: flex;
+  background: transparent;
+  font-family: poppins-regular;
+  color: white;
+  font-size: 1.5vmax;
+  border: 2px solid white;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.route-button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-button-arrow {
+  size: 1.5vmax;
+  margin-left: .5vmax;
+  font-weight: bolder;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+  height: 100vh;
+  background: #2C2F30;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.about-boxes {
+  display: flex;
+  color: white;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-item1 {
+  height: 100px;
+  
+  width: 50px;
+  background-color: white;
+}
+
+.box-item2 {
+  height: 100px;
+  width: 50px;
+  background-color: black;
+}
+
+/* GLOBALS */
+
+.about-skills {
+  color: #1B5C5A;
+  margin: 0px;
+  list-style: none;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: center;
+  width: 60%;
+}
+
+@media only screen and (max-width: 550px){
+  .about-skills {
+    grid-template-columns: repeat(5, auto);
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.about-skills li{
+  margin: 20%;
+}
+
+.section-header {
+  display: flex;
+  color: white;
+  font-family: poppins-thin;
+  font-size: 2vmax;
+  
+  justify-content: center;
+}
+
+.section-header h1 {
+  position: relative;
+  margin-top: 65px;
+  margin-bottom: 15px;
+  border-bottom: solid #1B5C5A ;
+}
+
+h1 {
+  
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.skills-div {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
