@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsChevronDoubleDown } from "react-icons/bs";
 import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode } from "react-icons/si"
 import './App.css';
 import pic from "./images/download.jpeg"
@@ -19,7 +19,7 @@ function App() {
             <HashRouter>
               <HashLink className="route-button" smooth to="#about-section">
                 <button className="hero-button">
-                  Read More <BsArrowRight id="hero-button-arrow" className="hero-button-arrow" />
+                  Read More <BsArrowRight className="hero-button-arrow" />
                 </button>
               </HashLink>
             </HashRouter>
@@ -56,6 +56,13 @@ function App() {
             <img src={pic}></img>
           </div>
         </div>
+        <HashRouter>
+          <HashLink className="section-route-button" smooth to="#project-section">
+            <div className="down-arrow">
+              <BsChevronDoubleDown className="section-button-arrow" />
+            </div>
+          </HashLink>
+        </HashRouter>
       </section>
 
       <section className="project-section" id="project-section">
@@ -63,7 +70,7 @@ function App() {
           <h1>Projects</h1>
           <div className="break"></div>
         </div>
-       
+
       </section>
     </Fragment>
   );
