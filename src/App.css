@@ -127,8 +127,8 @@
 }
 
 .box-item1 {
-  /* width: 70%;
-  max-height: 75%; */
+  /* width: 70%; */
+  max-height: 75%;
   margin: 5%;
   font-family: poppins-regular;
   overflow-y: scroll;
@@ -166,14 +166,46 @@
   background: rgb(99, 108, 111);
   background-size: cover;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   display: flex;
 }
 
+.project-section-header {
+  display: flex;
+  color: white;
+  border-bottom: solid #1B5C5A ;
+  font-family: poppins-thin;
+  font-size: 2vmax;
+  justify-content: center;
+  margin-top: 5%
+}
 
+.project-container {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  max-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
+.project-row {
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow: auto;
+  border-radius: 7px;
+  padding: 12px;
+}
+
+.image {
+  width: 300px;
+}
 
 /* GLOBALS */
+
 .section-route-button {
   align-self: flex-end;
   position: absolute;
@@ -181,8 +213,6 @@
   margin-right: 2%;
   align-content: flex-end;
 }
-
-
 
 .section-header {
   display: flex;

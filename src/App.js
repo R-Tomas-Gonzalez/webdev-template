@@ -4,9 +4,14 @@ import { HashLink } from 'react-router-hash-link';
 import { BsArrowRight, BsChevronDoubleDown } from "react-icons/bs";
 import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode } from "react-icons/si"
 import './App.css';
-import pic from "./images/download.jpeg"
+import pic from "./images/download.jpeg";
+import {PROJECTS} from "./ProjectObjects.js"
+import ProjectsContainer from './Containers/ProjectsContainer';
+
 
 function App() {
+
+  const projects = PROJECTS;
 
   return (
     <Fragment>
@@ -64,12 +69,14 @@ function App() {
           </HashLink>
         </HashRouter>
       </section>
-
       <section className="project-section" id="project-section">
-        <div className="section-header">
+        <div className="project-section-header">
           <h1>Projects</h1>
-          <div className="break"></div>
         </div>
+        <div className="main-project-container">
+          <ProjectsContainer projects={projects}/>
+        </div>
+        
 
       </section>
     </Fragment>
