@@ -73,6 +73,29 @@
 
 
 /* ABOUT SECTION */
+.about-section {
+  height: 100vh;
+  background: #2C2F30;
+  background-size: cover;
+  position: relative;
+}
+
+.about-section-div-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-center-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .skills-div {
   width:100%;
@@ -80,7 +103,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
 }
 
@@ -105,37 +128,29 @@
   margin: 20%;
 }
 
-.about-section {
-  height: 100vh;
-  background: #2C2F30;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  position: relative;
-}
-
 .about-boxes {
   display: flex;
   width: 90%;
   color: white;
-  max-height: 50vh;
+  /* max-height: 50vh; */
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  flex-wrap: wrap-reverse;
+  /* overflow: hidden; */
 }
 
 .box-item1 {
-  /* width: 70%; */
-  max-height: 75%;
+  max-height: 300px;
+  max-width: 750px;
+  min-width: 400px;
   margin: 5%;
   font-family: poppins-regular;
   overflow-y: scroll;
 }
 
 .box-item2 {
-  margin: 5% 5% 5% 0;
+  margin: 5%;
+  min-width: 200px;
 }
 
 .down-arrow{
@@ -208,9 +223,9 @@
 
 .section-route-button {
   align-self: flex-end;
-  position: absolute;
+  /* position: absolute; */
   bottom: 2%;
-  margin-right: 2%;
+  margin: 2%;
   align-content: flex-end;
 }
 
@@ -218,14 +233,13 @@
   display: flex;
   color: white;
   font-family: poppins-thin;
-  font-size: 2vmax;
+  font-size: 1.75em;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .section-header h1 {
   position: relative;
-  margin-top: 10%;
-  margin-bottom: 35%;
   border-bottom: solid #1B5C5A ;
 }
 
