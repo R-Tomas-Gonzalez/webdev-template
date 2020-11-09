@@ -219,6 +219,56 @@
   width: 300px;
 }
 
+/* Contact SECTION */
+
+.contact-section {
+  height: 300px;
+  background: #939DA0;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.contact-section-header {
+  display: flex;
+  color: white;
+  border-bottom: solid #1B5C5A ;
+  font-family: poppins-thin;
+  font-size: 2vmax;
+  justify-content: center;
+  margin-top: 5%
+}
+
+.contact-links-div {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2C2F30;
+  /* position: absolute; */
+  bottom: 0;
+}
+
+.contact-links {
+  color: white;
+  margin: 0px;
+  list-style: none;
+  padding: 10px;
+  /* display: grid;
+  grid-template-columns: repeat(5, auto); */
+  align-items: center;
+  width: 60%;
+  text-align: center;
+}
+
+.contact-links li {
+  display: inline;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
 /* GLOBALS */
 
 .section-route-button {

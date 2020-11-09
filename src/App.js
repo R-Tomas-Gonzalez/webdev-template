@@ -2,12 +2,13 @@ import React, { Fragment } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { BsArrowRight, BsChevronDoubleDown } from "react-icons/bs";
-import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode } from "react-icons/si"
+import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode, SiLinkedin, SiGithub, SiMedium, SiTwitter, SiInstagram } from "react-icons/si"
 import './App.css';
 import pic from "./images/download.jpeg";
 import {PROJECTS} from "./ProjectObjects.js"
 import ProjectsContainer from './Containers/ProjectsContainer';
-
+import { Form, Grid, Button, Header, Segment, Modal, Icon } from 'semantic-ui-react'
+import ContactForm from './Components/ContactForm';
 
 function App() {
 
@@ -81,6 +82,24 @@ function App() {
           <ProjectsContainer projects={projects}/>
         </div>
         
+
+      </section>
+      <section className="contact-section" id="contact-section">
+        <div className="contact-section-header">
+          <h1>Contact</h1>
+        </div>
+        <div>
+          <a className="hero-button" target="_blank" href="mailto:christorres09@gmail.com">Email Me</a>
+        </div>
+        <div className="contact-links-div" >
+          <ul className="contact-links">
+            <li><SiLinkedin size="3vmax"/></li>
+            <li><SiGithub size="3vmax"/></li>
+            <li><SiMedium size="3vmax"/></li>
+            <li><SiTwitter size="3vmax"/></li>
+            <li><SiInstagram size="3vmax"/></li>
+          </ul>
+        </div>
 
       </section>
     </Fragment>
