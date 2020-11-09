@@ -80,6 +80,15 @@
   position: relative;
 }
 
+@media all and (max-width: 1000px) {
+  .about-section {
+    height: fit-content;
+    background: #2C2F30;
+    background-size: cover;
+    position: relative;
+  }
+}
+
 .about-section-div-container {
   height: 100%;
   width: 100%;
@@ -130,7 +139,7 @@
 
 .about-boxes {
   display: flex;
-  width: 90%;
+  width: 100%;
   color: white;
   /* max-height: 50vh; */
   justify-content: center;
@@ -140,16 +149,16 @@
 }
 
 .box-item1 {
-  max-height: 300px;
-  max-width: 750px;
+  max-height: 3500px;
+  max-width: 600px;
   min-width: 400px;
-  margin: 5%;
+  margin: 25px;
   font-family: poppins-regular;
   overflow-y: scroll;
 }
 
 .box-item2 {
-  margin: 5%;
+  margin: 25px;
   min-width: 200px;
 }
 
@@ -181,9 +190,10 @@
   background: rgb(99, 108, 111);
   background-size: cover;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   display: flex;
+  
 }
 
 .project-section-header {
@@ -213,10 +223,22 @@
   overflow: auto;
   border-radius: 7px;
   padding: 12px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+}
+
+.main-project-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image {
-  width: 300px;
+  width: 400px;
+  min-width: 100px;
 }
 
 /* Contact SECTION */
@@ -285,7 +307,7 @@
   font-family: poppins-thin;
   font-size: 1.75em;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .section-header h1 {
