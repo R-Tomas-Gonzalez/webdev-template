@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { BsArrowRight, BsChevronDoubleDown } from "react-icons/bs";
+import { BsArrowRight, BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode, SiLinkedin, SiGithub, SiMedium, SiTwitter, SiInstagram } from "react-icons/si"
 import './App.css';
 import pic from "./images/download.jpeg";
 import {PROJECTS} from "./ProjectObjects.js"
 import ProjectsContainer from './Containers/ProjectsContainer';
-import { Form, Grid, Button, Header, Segment, Modal, Icon } from 'semantic-ui-react'
 import ContactForm from './Components/ContactForm';
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
 
   return (
     <Fragment>
-      <section className="header">
+      <section className="header" id="landing">
         <div className="black-overlay">
           <div className="headline">
             <h1 className="headline-words">HELLO, MY NAME IS <span className="headline-name">TOMAS</span>
@@ -91,14 +90,24 @@ function App() {
         <div>
           <a className="hero-button" target="_blank" href="mailto:christorres09@gmail.com">Email Me</a>
         </div>
+        
         <div className="contact-links-div" >
           <ul className="contact-links">
-            <li><SiLinkedin size="3vmax"/></li>
-            <li><SiGithub size="3vmax"/></li>
-            <li><SiMedium size="3vmax"/></li>
-            <li><SiTwitter size="3vmax"/></li>
-            <li><SiInstagram size="3vmax"/></li>
+            <li ><SiLinkedin className="link-icon" onClick={(e) => {window.open('https://www.linkedin.com/in/chris-torres-4286471a2/')}} size="2.5em" /></li>
+            <li ><SiGithub className="link-icon" onClick={(e) => {window.open('https://github.com/Christorres392')}} size="2.5em"/></li>
+            <li ><SiMedium className="link-icon" onClick={(e) => {window.open('https://christorres09.medium.com/')}} size="2.5em"/></li>
+            <li ><SiTwitter className="link-icon" size="2.5em"/></li>
+            <li ><SiInstagram className="link-icon" size="2.5em"/></li>
           </ul>
+          <div>
+          <HashRouter>
+            <HashLink className="section-route-button-up" smooth to="#landing">
+              <div className="down-arrow">
+                <BsChevronDoubleUp className="section-button-arrow" />
+              </div>
+            </HashLink>
+          </HashRouter>
+          </div>
         </div>
 
       </section>

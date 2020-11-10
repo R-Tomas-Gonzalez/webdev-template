@@ -48,6 +48,14 @@
   align-items: center;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
+  padding: 5px;
+  transition: background 1s;
+}
+.hero-button:hover {
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
+  background: #1B5C5A;
 }
 
 .route-button {
@@ -134,7 +142,7 @@
 }
 
 .about-skills li{
-  margin: 20%;
+  margin: 15%;
 }
 
 .about-boxes {
@@ -251,6 +259,7 @@
   justify-content: space-between;
   flex-direction: column;
   display: flex;
+  
 }
 
 .contact-section-header {
@@ -260,7 +269,7 @@
   font-family: poppins-thin;
   font-size: 2vmax;
   justify-content: center;
-  margin-top: 5%
+  /* margin-top: 25px */
 }
 
 .contact-links-div {
@@ -290,6 +299,19 @@
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
+
+.link-icon:hover {
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
+}
+
+.section-route-button-up {
+  align-self: flex-end;
+  position: absolute; 
+  right: 5%;
+  align-content: flex-end;
+}
+
 
 /* GLOBALS */
 
