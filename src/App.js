@@ -7,8 +7,6 @@ import './App.css';
 import pic from "./images/download.jpeg";
 import {PROJECTS} from "./ProjectObjects.js"
 import ProjectsContainer from './Containers/ProjectsContainer';
-import { Form, Grid, Button, Header, Segment, Modal, Icon } from 'semantic-ui-react'
-import ContactForm from './Components/ContactForm';
 
 function App() {
 
@@ -36,16 +34,16 @@ function App() {
         <div className="about-section-div-container">
           <div className="skills-div">
             <ul className="about-skills">
-              <li><SiReact size="3vmax" /></li>
-              <li><SiJavascript size="3vmax" /></li>
-              <li><SiRuby size="3vmax" /></li>
-              <li><SiRails size="3vmax" /></li>
-              <li><SiAdobexd size="3vmax" /></li>
-              <li><SiAdobe size="3vmax" /></li>
-              <li><SiPostgresql size="3vmax" /></li>
-              <li><SiHtml5 size="3vmax" /></li>
-              <li><SiCss3 size="3vmax" /></li>
-              <li><SiVisualstudiocode size="3vmax" /></li>
+              <li><SiReact size="2.5em" /></li>
+              <li><SiJavascript size="2.5em" /></li>
+              <li><SiRuby size="2.5em" /></li>
+              <li><SiRails size="2.5em" /></li>
+              <li><SiAdobexd size="2.5em" /></li>
+              <li><SiAdobe size="2.5em" /></li>
+              <li><SiPostgresql size="2.5em" /></li>
+              <li><SiHtml5 size="2.5em" /></li>
+              <li><SiCss3 size="2.5em" /></li>
+              <li><SiVisualstudiocode size="2.5em" /></li>
             </ul>
           </div>
           <div className="about-center-div">
@@ -81,7 +79,13 @@ function App() {
         <div className="main-project-container">
           <ProjectsContainer projects={projects}/>
         </div>
-        
+        <HashRouter>
+            <HashLink className="section-route-button" smooth to="#contact-section">
+              <div className="down-arrow">
+                <BsChevronDoubleDown className="section-button-arrow" />
+              </div>
+            </HashLink>
+        </HashRouter>
 
       </section>
       <section className="contact-section" id="contact-section">
