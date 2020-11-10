@@ -48,6 +48,8 @@
   align-items: center;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
+  padding: 5px;
 }
 
 .route-button {
@@ -134,7 +136,8 @@
 }
 
 .about-skills li{
-  margin: 20%;
+  margin: 15%;
+  text-align: center;
 }
 
 .about-boxes {
@@ -201,14 +204,14 @@
   color: white;
   border-bottom: solid #1B5C5A ;
   font-family: poppins-thin;
-  font-size: 2vmax;
+  font-size: 1.75em;
   justify-content: center;
-  margin-top: 5%
+  margin-top: 25px;
 }
 
 .project-container {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 100%;
   background-color: white;
   max-height: 50vh;
@@ -219,7 +222,6 @@
 
 .project-row {
   display: flex;
-  flex-wrap: nowrap; 
   overflow: auto;
   border-radius: 7px;
   padding: 12px;
@@ -237,8 +239,78 @@
 }
 
 .image {
-  width: 400px;
-  min-width: 100px;
+  display: block;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: poppins-light;
+  max-width: 32%;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: poppins-light;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image-overlay-blur {
+  backdrop-filter: blur(2px);
+}
+
+.image-overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+.image-overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image-title {
+  font-family: poppins-regular;
+  font-size: 1.5em;
+}
+
+@media all and (max-width: 1056px) {
+
+  .project-section {
+    height: fit-content;
+  }
+
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+    /* overflow: visible; */
+    height: fit-content;
+  }
+
+  .project-card {
+    min-width: 85%;
+  }
+
 }
 
 /* Contact SECTION */
@@ -258,9 +330,9 @@
   color: white;
   border-bottom: solid #1B5C5A ;
   font-family: poppins-thin;
-  font-size: 2vmax;
+  font-size: 1.75em;
   justify-content: center;
-  margin-top: 5%
+  margin-top: 25px;
 }
 
 .contact-links-div {
@@ -290,6 +362,8 @@
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
+
+
 
 /* GLOBALS */
 
@@ -321,5 +395,10 @@ h1 {
   margin-block-end: 0px;
 }
 
+@media all and (max-width: 500px) {
+  .section-route-button {
+    display: none;
+  }
+}
 
 
