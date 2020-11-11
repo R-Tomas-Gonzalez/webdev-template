@@ -35,16 +35,16 @@ function App() {
         <div className="about-section-div-container">
           <div className="skills-div">
             <ul className="about-skills">
-              <li><SiReact size="2.5em" /></li>
-              <li><SiJavascript size="2.5em" /></li>
-              <li><SiRuby size="2.5em" /></li>
-              <li><SiRails size="2.5em" /></li>
-              <li><SiAdobexd size="2.5em" /></li>
-              <li><SiAdobe size="2.5em" /></li>
-              <li><SiPostgresql size="2.5em" /></li>
-              <li><SiHtml5 size="2.5em" /></li>
-              <li><SiCss3 size="2.5em" /></li>
-              <li><SiVisualstudiocode size="2.5em" /></li>
+              <li><SiReact size="5.5vmin" /></li>
+              <li><SiJavascript size="5.5vmin" /></li>
+              <li><SiRuby size="5.5vmin" /></li>
+              <li><SiRails size="5.5vmin" /></li>
+              <li><SiAdobexd size="5.5vmin" /></li>
+              <li><SiAdobe size="5.5vmin" /></li>
+              <li><SiPostgresql size="5.5vmin" /></li>
+              <li><SiHtml5 size="5.5vmin" /></li>
+              <li><SiCss3 size="5.5vmin" /></li>
+              <li><SiVisualstudiocode size="5.5vmin" /></li>
             </ul>
           </div>
           <div className="about-center-div">
@@ -99,11 +99,11 @@ function App() {
         
         <div className="contact-links-div" >
           <ul className="contact-links">
-            <li ><SiLinkedin className="link-icon" onClick={(e) => {window.open('https://www.linkedin.com/in/chris-torres-4286471a2/')}} size="2.5em" /></li>
-            <li ><SiGithub className="link-icon" onClick={(e) => {window.open('https://github.com/Christorres392')}} size="2.5em"/></li>
-            <li ><SiMedium className="link-icon" onClick={(e) => {window.open('https://christorres09.medium.com/')}} size="2.5em"/></li>
-            <li ><SiTwitter className="link-icon" size="2.5em"/></li>
-            <li ><SiInstagram className="link-icon" size="2.5em"/></li>
+            <li ><SiLinkedin className="link-icon" onClick={(e) => {window.open('https://www.linkedin.com/in/chris-torres-4286471a2/')}} size="5.5vmin" /></li>
+            <li ><SiGithub className="link-icon" onClick={(e) => {window.open('https://github.com/Christorres392')}} size="5.5vmin"/></li>
+            <li ><SiMedium className="link-icon" onClick={(e) => {window.open('https://christorres09.medium.com/')}} size="5.5vmin"/></li>
+            <li ><SiTwitter className="link-icon" size="5.5vmin"/></li>
+            <li ><SiInstagram className="link-icon" size="5.5vmin"/></li>
           </ul>
           <div className="up-arrow">
           <HashRouter>

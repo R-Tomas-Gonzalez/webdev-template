@@ -159,7 +159,7 @@
 .box-item1 {
   max-height: 3500px;
   max-width: 600px;
-  min-width: 400px;
+  min-width: 350px;
   margin: 25px;
   font-family: poppins-regular;
   overflow-y: scroll;
@@ -314,6 +314,7 @@
 
   .project-card {
     min-width: 85%;
+    margin: 25px
   }
 
 }
