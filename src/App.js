@@ -4,10 +4,9 @@ import { HashLink } from 'react-router-hash-link';
 import { BsArrowRight, BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode, SiLinkedin, SiGithub, SiMedium, SiTwitter, SiInstagram } from "react-icons/si"
 import './App.css';
-import pic from "./images/download.jpeg";
+import pic from "./images/business_pro.jpeg";
 import {PROJECTS} from "./ProjectObjects.js"
 import ProjectsContainer from './Containers/ProjectsContainer';
-import ContactForm from './Components/ContactForm';
 
 function App() {
 
@@ -18,9 +17,10 @@ function App() {
       <section className="header" id="landing">
         <div className="black-overlay">
           <div className="headline">
-            <h1 className="headline-words">HELLO, MY NAME IS <span className="headline-name">TOMAS</span>
-              <br />
-          I'M A FULL STACK WEB DEVELOPER</h1>
+            <h1 className="headline-words">HELLO, MY NAME IS <span className="headline-name">TOMAS</span></h1>
+            <p className="headline-paragraph">I am a junior software engineer who specializes in <span className="headline-paragraph-span">React.js</span> and <span className="headline-paragraph-span">Ruby on Rails</span>.</p>
+            <p className="headline-paragraph">I also love journalism and coffee.</p>
+            
             <HashRouter>
               <HashLink className="route-button" smooth to="#about-section">
                 <button className="hero-button">
@@ -53,13 +53,24 @@ function App() {
             </div>
             <div className="about-boxes">
               <div className="box-item1">
-                  Officia amet in amet tempor duis quis do adipisicing. Incididunt velit eiusmod do officia quis ullamco esse. Fugiat pariatur tempor non occaecat ipsum ut sint labore pariatur aliquip proident sint quis pariatur. Ullamco id esse ullamco eu laborum officia magna. Esse enim et voluptate veniam velit ad adipisicing cillum est Lorem minim cupidatat exercitation exercitation.
-                <br></br>
-                  <br></br>
-                Cillum consequat sit eu dolor nisi aliquip quis ea tempor esse non anim sit. Id tempor voluptate nisi incididunt dolor proident consequat pariatur sint mollit. Veniam est nisi quis id ipsum esse id cillum non aliquip nulla ut. Incididunt veniam deserunt laboris consequat minim veniam. Laborum aute eiusmod officia aliqua ex adipisicing nostrud non anim officia amet velit. Non eiusmod labore commodo anim irure nostrud minim ea ea sit cupidatat laboris fugiat. Amet laboris adipisicing sint anim magna ullamco anim mollit culpa officia non eu.
+                  <p>Hey there!</p>
+                  <p>So glad to have you on my website. I can't wait to get to know you!</p>
+                  <p>I am a junior Full Stack software engineer who specializes in React.js and Ruby on Rails. My goal is to work with
+                    top companies to advance my skills within the field. Flatiron School has been an integral part in my development as
+                    a software engineer. Also, my Bachelor of Arts in Journalism from the University of North Texas has taught me key communication,
+                    multimedia, copy writing, and marketing skills.
+                  </p>
+                  <p>Below you will find my projects, contact and resume. Please reach out with any feedback!
+                    I absolutely love connecting with new people.</p>
+                  <p style={{textAlign: "right"}}>Cheers,
+                      <br/>
+                      -Tomas
+                  </p>
+
+
               </div>
                 <div className="box-item2">
-                  <img src={pic}></img>
+                  <img className="profile-pic" src={pic} alt="profile pic"/>
               </div>
             </div>
           </div>
@@ -94,14 +105,14 @@ function App() {
           <h1>Contact</h1>
         </div>
         <div>
-          <a className="hero-button" target="_blank" href="mailto:christorres09@gmail.com">Email Me</a>
+          <a className="hero-button" target="_blank" rel="noreferrer" href="mailto:r.tomas.gonzalez01@gmail.com">Email Me</a>
         </div>
         
         <div className="contact-links-div" >
           <ul className="contact-links">
-            <li ><SiLinkedin className="link-icon" onClick={(e) => {window.open('https://www.linkedin.com/in/chris-torres-4286471a2/')}} size="5.5vmin" /></li>
-            <li ><SiGithub className="link-icon" onClick={(e) => {window.open('https://github.com/Christorres392')}} size="5.5vmin"/></li>
-            <li ><SiMedium className="link-icon" onClick={(e) => {window.open('https://christorres09.medium.com/')}} size="5.5vmin"/></li>
+            <li ><SiLinkedin className="link-icon" onClick={(e) => {window.open('https://www.linkedin.com/in/rtomasgonzalez/')}} size="5.5vmin" /></li>
+            <li ><SiGithub className="link-icon" onClick={(e) => {window.open('https://github.com/R-Tomas-Gonzalez')}} size="5.5vmin"/></li>
+            <li ><SiMedium className="link-icon" onClick={(e) => {window.open('https://tomas-82726.medium.com/')}} size="5.5vmin"/></li>
             <li ><SiTwitter className="link-icon" size="5.5vmin"/></li>
             <li ><SiInstagram className="link-icon" size="5.5vmin"/></li>
           </ul>

@@ -26,7 +26,7 @@
   text-align: center;
   color: white;
   margin: 10px;
-  font-family: poppins-thin;
+  font-family: poppins-light;
   font-size: 2vmax;
 }
 
@@ -36,6 +36,16 @@
 
 .headline-words {
   margin-bottom: 10px;
+}
+
+.headline-paragraph {
+  margin:0;
+  margin-bottom: 10px;
+  font-size: smaller;
+}
+
+.headline-paragraph-span {
+  text-decoration: underline;
 }
 
 .hero-button {
@@ -168,6 +178,10 @@
 .box-item2 {
   margin: 25px;
   min-width: 200px;
+}
+
+.profile-pic {
+  width: 250px;
 }
 
 .down-arrow{
@@ -373,6 +387,7 @@
 .link-icon:hover {
   transform: scale(1.1);
   transition: all .2s ease-in-out;
+  
 }
 
 .section-route-button-up {
@@ -424,4 +439,6 @@ h1 {
   }
 }
 
-
+.project-links {
+  text-decoration: none;
+}
