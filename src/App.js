@@ -62,9 +62,14 @@ function App() {
                   </p>
                   <p>Below you will find my projects, contact and resume. Please reach out with any feedback!
                     I absolutely love connecting with new people.</p>
-                  <p style={{textAlign: "right"}}>Cheers,
+                  <p style={{horizontalAlign:"middle"}}>
+                  <a target="_blank" rel="noreferrer" href="https://bit.ly/2K4tJZt" style={{display: "inline-block"}}><button className="resume-button">
+                  Resume
+                  </button></a>
+                    <span style={{float: "right"}}>
+                      Cheers,
                       <br/>
-                      -Tomas
+                      -Tomas</span>
                   </p>
 
 
@@ -126,7 +131,6 @@ function App() {
           </HashRouter>
           </div>
         </div>
-
       </section>
     </Fragment>
   );

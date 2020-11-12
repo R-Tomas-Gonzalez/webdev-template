@@ -4,7 +4,7 @@ import {DiGithubAlt} from 'react-icons/di'
 import {HiDesktopComputer} from 'react-icons/hi';
 
 const Project = (props) => {
-    console.log(props.project)
+    // console.log(props.project)
     const {img, title, description, githubBack, githubFront, demo, website, github} = props.project
 
     return ( 
@@ -36,7 +36,6 @@ const Project = (props) => {
             <a className="project-links" target="_blank" rel="noreferrer" href={website}><HiDesktopComputer style={{textDecoration: "none", color:"white", padding:"2px"}} size="2vmax"/></a> </p> 
             : <p> <a  className="project-links" target="_blank" rel="noreferrer" href={demo}><SiYoutube style={{textDecoration: "none", color:"white", padding:"2px"}} size="2vmax"/></a> 
             <a className="project-links" target="_blank" rel="noreferrer" href={github}><SiGithub style={{textDecoration: "none", color:"white", padding:"2px"}} size="2vmax"/></a> </p> }
-            
         </div>
      );
 }
