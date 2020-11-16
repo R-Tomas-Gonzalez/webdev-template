@@ -63,7 +63,7 @@ function App() {
                   <p>Below you will find my projects, contact and resume. Please reach out with any feedback!
                     I absolutely love connecting with new people.</p>
                   <p style={{horizontalAlign:"middle"}}>
-                  <a target="_blank" rel="noreferrer" href="https://bit.ly/2K4tJZt" style={{display: "inline-block"}}><button className="resume-button">
+                  <a target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1pGcgmsuHV80UWSypiFAs7M_FVMZuCsJQXB6FvIHMa_0/edit?usp=sharing" style={{display: "inline-block"}}><button className="resume-button">
                   Resume
                   </button></a>
                     <span style={{float: "right"}}>
