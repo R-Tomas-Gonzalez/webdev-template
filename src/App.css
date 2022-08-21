@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.hero-section {
+  background-color: #50717b;
+  padding: 30px 5% 0px;
+}
+
+
+
+
 /* HEADER SECTION */
 .header {
   background: url("./images/andrew-neel-jtsW--Z6bFw-unsplash.jpg") no-repeat;
@@ -26,7 +34,6 @@
   text-align: center;
   color: white;
   margin: 10px;
-  font-family: poppins-light;
   font-size: 2vmax;
 }
 
@@ -51,7 +58,6 @@
 .hero-button {
   display: flex;
   background: transparent;
-  font-family: poppins-regular;
   color: white;
   font-size: 1.5vmax;
   border: 2px solid white;
@@ -172,8 +178,7 @@
   max-width: 600px;
   min-width: 350px;
   margin: 25px;
-  font-family: poppins-regular;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .box-item2 {
@@ -209,7 +214,6 @@
  .resume-button {
   display: flex;
   background: transparent;
-  font-family: poppins-regular;
   color: white;
   font-size: 1vmax;
   border: 2px solid white;
@@ -247,7 +251,6 @@
   display: flex;
   color: white;
   border-bottom: solid #1B5C5A ;
-  font-family: poppins-thin;
   font-size: 1.75em;
   justify-content: center;
   margin-top: 25px;
@@ -292,7 +295,6 @@
   flex-direction: column;
   align-items: center;
   color: white;
-  font-family: poppins-light;
   max-width: 32%;
 }
 
@@ -311,7 +313,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  font-family: poppins-light;
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -334,7 +335,6 @@
 }
 
 .image-title {
-  font-family: poppins-regular;
   font-size: 1.5em;
 }
 
@@ -375,7 +375,6 @@
   display: flex;
   color: white;
   border-bottom: solid #1B5C5A ;
-  font-family: poppins-thin;
   font-size: 1.75em;
   justify-content: center;
   margin-top: 25px;
@@ -438,7 +437,6 @@
 .section-header {
   display: flex;
   color: white;
-  font-family: poppins-thin;
   font-size: 1.75em;
   justify-content: center;
   margin-top: 25px;

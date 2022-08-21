@@ -1,0 +1,32 @@
+@media only screen and (max-width: 600px) {
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-image {
+        width: 75%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 680px;
+        height: auto
+    }
+
+    .hero-image {
+        width: 75%;
+        height: 100%;
+    }
+    
+}
+
+

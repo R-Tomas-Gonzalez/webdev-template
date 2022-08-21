@@ -1,33 +1,8 @@
 body {
+    padding: 0;
     margin: 0;
-}
-
-@font-face {
-    font-family: 'poppins-thin';
-    src: local('poppins-thin'), url("./fonts/poppins/Poppins-Thin.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: 'poppins-regular';
-    src: local('poppins-regular'), url("./fonts/poppins/Poppins-Regular.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: 'poppins-bold';
-    src: local('poppins-bold'), url("./fonts/poppins/Poppins-Bold.ttf") format('truetype');  
-}
-
-@font-face {
-    font-family: 'poppins-light';
-    src: local('poppins-light'), url("./fonts/poppins/Poppins-Light.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: 'poppins-extra-light';
-    src: local('poppins-extra-light'), url("./fonts/poppins/Poppins-ExtraLight.ttf") format('truetype');    
-}
-
-@font-face {
-    font-family: 'poppins-italic';
-    src: local('poppins-italic'), url("./fonts/poppins/Poppins-Italic.ttf") format('truetype');  
+    font-family:  'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
 }
