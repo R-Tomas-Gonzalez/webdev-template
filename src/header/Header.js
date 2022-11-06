@@ -30,7 +30,7 @@ export const Header = () => {
                             </li>
                         </ul>
                     </HashRouter>
-                    <a className='cta' href="#"><button>Resume</button></a>
+                    <a className='cta' href="https://docs.google.com/document/d/1pGcgmsuHV80UWSypiFAs7M_FVMZuCsJQXB6FvIHMa_0" target='_blank' rel='noreferrer'><button>Resume</button></a>
                 </div>
             </nav>
         </header>

@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
 import Project from '../Components/Project';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 class ProjectsContainer extends Component {
-    state = {  }
-    render() { 
-        
-        return ( 
-            <div className="project-row">
-                {this.props.projects.map((project, index) => <Project key={index} project={project}/>)}
-            </div>
-         );
+
+    render() {
+
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
+
+
+        return (
+            <Slider {...settings}>
+                {this.props.projects.map((project, index) => <Project key={index} project={project} />)}
+            </Slider>
+        );
     }
 }
- 
+
 export default ProjectsContainer;

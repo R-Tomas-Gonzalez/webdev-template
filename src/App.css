@@ -7,7 +7,17 @@
   padding: 30px 5% 0px;
 }
 
+.slick-slider {
+  width: 80%;
+}
 
+.slick-slide>div {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
 
 
 /* HEADER SECTION */
@@ -46,7 +56,7 @@
 }
 
 .headline-paragraph {
-  margin:0;
+  margin: 0;
   margin-bottom: 10px;
   font-size: smaller;
 }
@@ -84,10 +94,10 @@
   size: 1.5vmax;
   margin-left: .5vmax;
   font-weight: bolder;
-  
+
 }
 
-.hero-button:hover > .hero-button-arrow{
+.hero-button:hover>.hero-button-arrow {
   size: 1.5vmax;
   margin-left: .5vmax;
   font-weight: bolder;
@@ -98,20 +108,11 @@
 
 
 /* ABOUT SECTION */
+
 .about-section {
-  height: 100vh;
   background: #2C2F30;
   background-size: cover;
   position: relative;
-}
-
-@media all and (max-width: 1000px) {
-  .about-section {
-    height: fit-content;
-    background: #2C2F30;
-    background-size: cover;
-    position: relative;
-  }
 }
 
 .about-section-div-container {
@@ -132,7 +133,7 @@
 }
 
 .skills-div {
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,13 +153,13 @@
   width: 60%;
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 550px) {
   .about-skills {
     grid-template-columns: repeat(5, auto);
   }
 }
 
-.about-skills li{
+.about-skills li {
   margin: 15%;
 }
 
@@ -190,7 +191,7 @@
   width: 250px;
 }
 
-.down-arrow{
+.down-arrow {
   color: white;
   font-size: 1.5em;
   cursor: pointer;
@@ -202,16 +203,18 @@
     transform: scale(0.9);
     box-shadow: 0 0 0 0 rgb(255, 254, 254, 0.7);
   }
+
   70% {
     transform: scale(1.25);
     /* box-shadow: 0 0 0 15px rgb(255, 254, 254, 0.7); */
   }
+
   100% {
     transform: scale(0.9);
   }
- }
+}
 
- .resume-button {
+.resume-button {
   display: flex;
   background: transparent;
   color: white;
@@ -237,23 +240,22 @@
 /* Project SECTION */
 
 .project-section {
-  height: 100vh;
   background: rgb(99, 108, 111);
   background-size: cover;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   display: flex;
-  
+  padding: 0 100px
 }
 
 .project-section-header {
   display: flex;
   color: white;
-  border-bottom: solid #1B5C5A ;
+  border-bottom: solid #1B5C5A;
   font-size: 1.75em;
   justify-content: center;
-  margin-top: 25px;
+  margin: 25px 0;
 }
 
 .project-container {
@@ -308,7 +310,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) );
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,45 +319,8 @@
   transition: opacity 0.25s;
 }
 
-.image-overlay-blur {
-  backdrop-filter: blur(2px);
-}
-
-.image-overlay > * {
-  transform: translateY(20px);
-  transition: transform 0.25s;
-}
-
-.image-overlay:hover {
-  opacity: 1;
-}
-
-.image-overlay:hover > * {
-  transform: translateY(0);
-}
-
 .image-title {
   font-size: 1.5em;
-}
-
-@media all and (max-width: 1056px) {
-
-  .project-section {
-    height: fit-content;
-  }
-
-  .project-row {
-    flex-direction: column;
-    align-items: center;
-    /* overflow: visible; */
-    height: fit-content;
-  }
-
-  .project-card {
-    min-width: 85%;
-    margin: 25px
-  }
-
 }
 
 /* Contact SECTION */
@@ -368,20 +333,20 @@
   justify-content: space-between;
   flex-direction: column;
   display: flex;
-  
+
 }
 
 .contact-section-header {
   display: flex;
   color: white;
-  border-bottom: solid #1B5C5A ;
+  border-bottom: solid #1B5C5A;
   font-size: 1.75em;
   justify-content: center;
   margin-top: 25px;
 }
 
 .contact-links-div {
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -411,11 +376,11 @@
 .link-icon:hover {
   transform: scale(1.1);
   transition: all .2s ease-in-out;
-  
+
 }
 
 .section-route-button-up {
- margin: 2%
+  margin: 2%
 }
 
 .up-arrow {
@@ -444,11 +409,11 @@
 
 .section-header h1 {
   position: relative;
-  border-bottom: solid #1B5C5A ;
+  border-bottom: solid #1B5C5A;
 }
 
 h1 {
-  
+
   margin-block-start: 0px;
   margin-block-end: 0px;
 }
@@ -457,6 +422,7 @@ h1 {
   .section-route-button {
     display: none;
   }
+
   .section-route-button-up {
     display: none;
   }

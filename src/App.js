@@ -1,19 +1,28 @@
 import React, { Fragment } from 'react';
-import { HashRouter } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
-import { BsArrowRight, BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
-import { SiRuby, SiReact, SiJavascript, SiRails, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode, SiLinkedin, SiGithub, SiMedium, SiTwitter, SiInstagram } from "react-icons/si"
+import { SiRuby, SiReact, SiJavascript, SiAdobexd, SiAdobe, SiPostgresql, SiHtml5, SiCss3, SiVisualstudiocode, SiLinkedin, SiGithub, SiMedium, SiTwitter, SiInstagram, SiYoutube } from "react-icons/si"
+import { DiGithubAlt } from 'react-icons/di'
+import { HiDesktopComputer } from 'react-icons/hi';
 import './App.css';
-import pic from "./images/business_pro.jpeg";
 import { PROJECTS } from "./ProjectObjects.js"
-import ProjectsContainer from './Containers/ProjectsContainer';
+// import ProjectsContainer from './Containers/ProjectsContainer';
 import { Header } from './header/Header';
 import { Hero } from './hero/Hero';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
 
   const projects = PROJECTS;
+
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    speed: 500
+  };
 
   return (
     <Fragment>
@@ -28,7 +37,6 @@ function App() {
               <li><SiReact size="5.5vmin" /></li>
               <li><SiJavascript size="5.5vmin" /></li>
               <li><SiRuby size="5.5vmin" /></li>
-              {/* <li><SiRails size="5.5vmin" /></li> */}
               <li><SiAdobexd size="5.5vmin" /></li>
               <li><SiAdobe size="5.5vmin" /></li>
               <li><SiPostgresql size="5.5vmin" /></li>
@@ -37,62 +45,55 @@ function App() {
               <li><SiVisualstudiocode size="5.5vmin" /></li>
             </ul>
           </div>
-          <div className="about-center-div">
-            <div className="section-header">
-              <h1>ABOUT</h1>
-            </div>
-            <div className="about-boxes">
-              <div className="box-item1">
-                <p>Hey there!</p>
-                <p>So glad to have you on my website. I can't wait to get to know you!</p>
-                <p>I am a junior Full Stack software engineer who specializes in React.js and Ruby on Rails. My goal is to work with
-                  top companies to advance my skills within the field. Flatiron School has been an integral part in my development as
-                  a software engineer. Also, my Bachelor of Arts in Journalism from the University of North Texas has taught me key communication,
-                  multimedia, copy writing, and marketing skills.
-                </p>
-                <p>Below you will find my projects, contact and resume. Please reach out with any feedback!
-                  I absolutely love connecting with new people.</p>
-                <p style={{ horizontalAlign: "middle" }}>
-                  <a target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1pGcgmsuHV80UWSypiFAs7M_FVMZuCsJQXB6FvIHMa_0/edit?usp=sharing" style={{ display: "inline-block" }}><button className="resume-button">
-                    Resume
-                  </button></a>
-                  <span style={{ float: "right" }}>
-                    Cheers,
-                    <br />
-                    -Tomas</span>
-                </p>
-
-
-              </div>
-              <div className="box-item2">
-                <img className="profile-pic" src={pic} alt="profile pic" />
-              </div>
-            </div>
-          </div>
-          <HashRouter>
-            <HashLink className="section-route-button" smooth to="#project-section">
-              <div className="down-arrow">
-                <BsChevronDoubleDown className="section-button-arrow" />
-              </div>
-            </HashLink>
-          </HashRouter>
         </div>
-
       </section>
       <section className="project-section" id="project-section">
         <div className="project-section-header">
           <h1>Projects</h1>
         </div>
-        <div className="main-project-container">
-          <ProjectsContainer projects={projects} />
-        </div>
-        <HashRouter>
-          <HashLink className="section-route-button" smooth to="#contact-section">
-            <div className="down-arrow">
-              <BsChevronDoubleDown className="section-button-arrow" />
+        <Slider {...settings}>
+          {projects.map((project) => (
+            <div>
+              {
+                <div className='card'>
+                  <div className='card-top'>
+                    <img className='image' src={project.img} alt={project.title} />
+                    <h1>{project.title}</h1>
+                  </div>
+                  <div className='card-bottom'>
+                    {project.githubFront ? <p><a target="_blank" rel="noreferrer" href={project.demo}><SiYoutube style={{ textDecoration: "none", color: "white", padding: "2px" }} target="_blank" rel="noreferrer" className="project-links" size="2vmax" /></a>
+                      <a className="project-links" target="_blank" rel="noreferrer" href={project.githubFront}><SiGithub style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a>
+                      <a className="project-links" target="_blank" rel="noreferrer" href={project.githubBack}><DiGithubAlt style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a>
+                      <a className="project-links" target="_blank" rel="noreferrer" href={project.website}><HiDesktopComputer style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a> </p>
+                      : <p> <a className="project-links" target="_blank" rel="noreferrer" href={project.demo}><SiYoutube style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a>
+                        <a className="project-links" target="_blank" rel="noreferrer" href={project.github}><SiGithub style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a> </p>}
+                  </div>
+                </div>
+                //   <a style={{ textDecoration: "none", color: "white" }} target="_blank" rel="noreferrer" href={project.website}>
+                //   <div>
+                //     <img src={project.img} alt={project.title} />
+                //     <div>
+                //       <div >{project.title}</div>
+                //       <p style={{ padding: "2%" }} >{project.description}</p>
+                //     </div>
+                //   </div>
+                // </a>
+              }
+
+              {/* <div className="image-title">{project.title}</div>
+              {project.githubFront ? <p><a target="_blank" rel="noreferrer" href={project.demo}><SiYoutube style={{ textDecoration: "none", color: "white", padding: "2px" }} target="_blank" rel="noreferrer" className="project-links" size="2vmax" /></a>
+                <a className="project-links" target="_blank" rel="noreferrer" href={project.githubFront}><SiGithub style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a>
+                <a className="project-links" target="_blank" rel="noreferrer" href={project.githubBack}><DiGithubAlt style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a>
+                <a className="project-links" target="_blank" rel="noreferrer" href={project.website}><HiDesktopComputer style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a> </p>
+                : <p> <a className="project-links" target="_blank" rel="noreferrer" href={project.demo}><SiYoutube style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a>
+                  <a className="project-links" target="_blank" rel="noreferrer" href={project.github}><SiGithub style={{ textDecoration: "none", color: "white", padding: "2px" }} size="2vmax" /></a> </p>} */}
             </div>
-          </HashLink>
-        </HashRouter>
+          ))}
+        </Slider>
+
+        {/* <div className="main-project-container">
+          <ProjectsContainer projects={projects} />
+        </div> */}
 
       </section>
       <section className="contact-section" id="contact-section">
@@ -111,15 +112,6 @@ function App() {
             <li ><SiTwitter style={{ cursor: "pointer" }} className="link-icon" onClick={(e) => { window.open('https://twitter.com/rtgonzalezimg') }} size="5.5vmin" /></li>
             <li ><SiInstagram style={{ cursor: "pointer" }} className="link-icon" onClick={(e) => { window.open('https://www.instagram.com/r.tomasgonzalez/?hl=en') }} size="5.5vmin" /></li>
           </ul>
-          <div className="up-arrow">
-            <HashRouter>
-              <HashLink className="section-route-button-up" smooth to="#hero-section">
-                <div className="down-arrow">
-                  <BsChevronDoubleUp className="section-button-arrow" />
-                </div>
-              </HashLink>
-            </HashRouter>
-          </div>
         </div>
       </section>
     </Fragment>
